@@ -122,5 +122,5 @@ gulp.task("csscomb", function () {
 });
 
 gulp.task("images", gulp.series("imagemin", "webp"));
-gulp.task("build", gulp.series("clean", "copy", "css", "js", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "js", "html"));
 gulp.task("start", gulp.series("build", "server"));
