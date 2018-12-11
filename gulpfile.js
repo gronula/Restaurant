@@ -14,6 +14,7 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
+    "source/img/**/*",
     "source/**/*.min.js",
   ], {base: "source"})
   .pipe(gulp.dest("build"));
@@ -22,7 +23,7 @@ gulp.task("copy", function () {
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe($.plumber())
-    .pipe($.cache($.less()))
+    .pipe($.less())
     .pipe($.postcss([
       autoprefixer()
     ]))
@@ -34,21 +35,21 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("sprite", function () {
-  return gulp.src([
-    "source/img/htmlacademy.svg",
-    "source/img/icon-fb.svg",
-    "source/img/icon-insta.svg",
-    "source/img/icon-mail.svg",
-    "source/img/icon-phone.svg",
-    "source/img/icon-vk.svg"
-  ])
-    .pipe($.svgstore({
-      inlineSvg: true
-    }))
-    .pipe($.rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-});
+// gulp.task("sprite", function () {
+//   return gulp.src([
+//     "source/img/htmlacademy.svg",
+//     "source/img/icon-fb.svg",
+//     "source/img/icon-insta.svg",
+//     "source/img/icon-mail.svg",
+//     "source/img/icon-phone.svg",
+//     "source/img/icon-vk.svg"
+//   ])
+//     .pipe($.svgstore({
+//       inlineSvg: true
+//     }))
+//     .pipe($.rename("sprite.svg"))
+//     .pipe(gulp.dest("build/img"));
+// });
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -107,7 +108,7 @@ gulp.task("server", function () {
     ui: false
   });
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("clear", function (done) {
