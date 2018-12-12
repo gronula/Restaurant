@@ -16,3 +16,23 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    min-height: 72px;
+    border-bottom: 1px solid rgba(232, 234, 237, 0.68);
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+  }
+}

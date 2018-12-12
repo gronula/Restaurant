@@ -53,4 +53,9 @@
     dishItemClickHandler(dishImage[i]);
     dishItemClickHandler(dishMore[i]);
   }
+
+  menuList.addEventListener('wheel', function (evt) {
+    evt.preventDefault();
+    console.log(evt);
+  })
 })();
