@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ресторан</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:700" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="logo">
+    <div class="page-header__logo">
       <a href="index.html">Ресторан</a>
     </div>
 
     <nav class="site-nav">
-      <button class="site-nav__toogle" type="button">Кнопка меню</button>
+      <button class="site-nav__toggle" type="button">Кнопка меню</button>
       <ul class="site-nav__list">
         <li><a class="site-nav__item" href="#">Рестораны</a></li>
         <li><a class="site-nav__item" href="#">Доставка</a></li>
@@ -34,79 +35,83 @@
 
   <main>
     <section class="info">
-      <h1 class="info__header">Ресторан</h1>
-      <table class="info__table">
-        <th>
-          <td class="info__title">Кухня</td>
-          <td class="info__title">Заказа</td>
-          <td class="info__title">Доставка</td>
-        </th>
-        <tr>
-          <td class="info__description">Восточная</td>
-          <td class="info__description">От 1000 ₽</td>
-          <td class="info__description">с 11:00 до 02:00</td>
-        </tr>
-      </table>
-      <a href="#" class="infp__button">О ресторане</a>
+      <div class="info__wrapper">
+        <h1 class="info__header">Ресторан</h1>
+        <table class="info__table">
+          <tr>
+            <th class="info__title">Кухня</th>
+            <th class="info__title">Заказа</th>
+            <th class="info__title">Доставка</th>
+          </tr>
+          <tr>
+            <td class="info__description">Восточная</td>
+            <td class="info__description">От 1000 ₽</td>
+            <td class="info__description">с 11:00 до 02:00</td>
+          </tr>
+        </table>
+        <a href="#" class="info__button">О ресторане</a>
+      </div>
     </section>
 
     <section class="menu">
       <button class="menu__toogle" type="button">Кнопка меню</button>
       <nav class="menu__nav">
-        <ul class="menu__list">
-          <li>
-            <a href="#" class="menu__item">Популярные</a>
-            <small class="menu__number">12</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Горячее</a>
-            <small class="menu__number">74</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Гарниры</a>
-            <small class="menu__number">16</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Выпечка</a>
-            <small class="menu__number">31</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Гриль</a>
-            <small class="menu__number">8</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Детское</a>
-            <small class="menu__number">12</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Закуски</a>
-            <small class="menu__number">21</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Супы</a>
-            <small class="menu__number">14</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Детское</a>
-            <small class="menu__number">12</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Закуски</a>
-            <small class="menu__number">21</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Супы</a>
-            <small class="menu__number">14</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Супы</a>
-            <small class="menu__number">14</small>
-          </li>
-          <li>
-            <a href="#" class="menu__item">Супы</a>
-            <small class="menu__number">14</small>
-          </li>
-        </ul>
+        <div class="menu__wrapper">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Популярные</a>
+              <small class="menu__number">12</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Горячее</a>
+              <small class="menu__number">74</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Гарниры</a>
+              <small class="menu__number">16</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Выпечка</a>
+              <small class="menu__number">31</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Гриль</a>
+              <small class="menu__number">8</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Детское</a>
+              <small class="menu__number">12</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Закуски</a>
+              <small class="menu__number">21</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Супы</a>
+              <small class="menu__number">14</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Детское</a>
+              <small class="menu__number">12</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Закуски</a>
+              <small class="menu__number">21</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Супы</a>
+              <small class="menu__number">14</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Супы</a>
+              <small class="menu__number">14</small>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Супы</a>
+              <small class="menu__number">14</small>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <h2 class="menu__header">Популярные блюда</h2>
@@ -121,13 +126,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-1.png" alt="Плов Чайханский" class="dish__image">
+        <div class="dish__wrapper">
+          <img class="dish__image" src="img/image-1.png" alt="Плов Чайханский">
+        </div>
 
-        <h3 class="dish__title">
-          Плов Чайханский
+        <div class="dish__header">
+          <h3 class="dish__title">Плов Чайханский</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">246 ₽</span>
+          <span class="dish__price">246 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -135,19 +142,22 @@
         </p>
       </article>
 
-      <article class="menu__dish dish">
+      <article class="menu__dish dish dish--current">
         <div class="dish__controls">
           <span class="dish__remove"></span>
           <span class="dish__number">2</span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-2.png" alt="Шаверма" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-2.png" alt="Шаверма" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Шаверма
+        <div class="dish__header">
+          <h3 class="dish__title">Шаверма</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">246 ₽</span>
+          <span class="dish__price">246 ₽</span>
+        </div>
+
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -161,13 +171,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-3.png" alt="Шашлык" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-3.png" alt="Шашлык" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Шашлык
+        <div class="dish__header">
+          <h3 class="dish__title">Шашлык</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">656 ₽</span>
+          <span class="dish__price">656 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -181,13 +193,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-4.png" alt="Судак" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-4.png" alt="Судак" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Судак
+        <div class="dish__header">
+          <h3 class="dish__title">Судак</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">226 ₽</span>
+          <span class="dish__price">226 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -201,13 +215,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-5.png" alt="Манты" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-5.png" alt="Манты" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Манты
+        <div class="dish__header">
+          <h3 class="dish__title">Манты</h3>
           <span class="dish__weight">250</span>
-        </h3>
-        <span class="dish__price">326 ₽</span>
+          <span class="dish__price">326 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -221,13 +237,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-6.png" alt="Шаверма" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-6.png" alt="Шаверма" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Шаверма
+        <div class="dish__header">
+          <h3 class="dish__title">Шаверма</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">146 ₽</span>
+          <span class="dish__price">146 ₽</span>
+      </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -241,13 +259,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-7.png" alt="Бешбармак" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-7.png" alt="Бешбармак" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Бешбармак
+        <div class="dish__header">
+          <h3 class="dish__title">Бешбармак</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">446 ₽</span>
+          <span class="dish__price">446 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -261,13 +281,15 @@
           <span class="dish__number"></span>
           <span class="dish__add"></span>
         </div>
-        <img src="img/image-8.png" alt="Ковурма" class="dish__image">
+        <div class="dish__wrapper">
+          <img src="img/image-8.png" alt="Ковурма" class="dish__image">
+        </div>
 
-        <h3 class="dish__title">
-          Ковурма
+        <div class="dish__header">
+            <h3 class="dish__title">Ковурма</h3>
           <span class="dish__weight">250 г</span>
-        </h3>
-        <span class="dish__price">246 ₽</span>
+          <span class="dish__price">246 ₽</span>
+        </div>
 
         <p class="dish__description">
           Камчатский краб, авокадо, свежие овощи и цитрусовый...
@@ -278,8 +300,10 @@
 
     <section class="order">
       <h2 class="order__header">
-        <a href="#">Мой заказ</a>
-        <small class="order__number">4</small>
+        <a class="order__link" href="#">
+          Мой заказ
+          <span class="order__number">4</span>
+        </a>
       </h2>
 
       <p class="order__empty">Пока пусто ;)</p>
@@ -287,44 +311,50 @@
   </main>
 
   <div class="product">
-    <img class="product__image" src="img/product.png" alt="">
-    <section class="product__info">
-      <h2 class="product__header">
-        Стейк из говядины
-        <span class="product__weight">250 г</span>
-      </h2>
+    <div class="product__wrapper">
+      <button class="product__close" type="button">Закрыть</button>
+      <img class="product__image" src="img/product.png" alt="">
 
-      <h3 class="product__title">Описание</h3>
-      <p class="product__description">Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium</p>
+      <section class="product__info">
+        <h2 class="product__header">
+          Стейк из говядины
+          <span class="product__weight">250 г</span>
+        </h2>
 
-      <h3 class="product__title">Состав</h3>
-      <p class="product__description">Микс салатов, лосось, соус терияки, соус Унаги</p>
+        <h3 class="product__title">Описание</h3>
+        <p class="product__description">Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium</p>
 
-      <h3 class="product__title">Пищевая ценность</h3>
-      <table class="product__table">
-        <th>
-          <td class="product__value">650</td>
-          <td class="product__value">34</td>
-          <td class="product__value">60</td>
-          <td class="product__value">12</td>
-        </th>
-        <tr>
-          <td class="product__substance">Ккал</td>
-          <td class="product__substance">Белки</td>
-          <td class="product__substance">Жиры</td>
-          <td class="product__substance">Углеводы</td>
-        </tr>
-      </table>
-    </section>
-    <section class="product__result">
-      <div class="product__controls">
-        <span class="product__remove"></span>
-        <span class="product__number"></span>
-        <span class="product__add"></span>
-      </div>
-      <span class="product__price">246 ₽</span>
-      <a class="product__buy" href="#">Добавить</a>
-    </section>
+        <h3 class="product__title">Состав</h3>
+        <p class="product__description">Микс салатов, лосось, соус терияки, соус Унаги</p>
+
+        <h3 class="product__title">Пищевая ценность</h3>
+        <table class="product__table">
+          <tr>
+            <th class="product__value">650</th>
+            <th class="product__value">34</th>
+            <th class="product__value">60</th>
+            <th class="product__value">12</th>
+          </tr>
+          <tr>
+            <td class="product__substance">Ккал</td>
+            <td class="product__substance">Белки</td>
+            <td class="product__substance">Жиры</td>
+            <td class="product__substance">Углеводы</td>
+          </tr>
+        </table>
+        </section>
+        <section class="product__result">
+          <div class="product__controls">
+            <span class="product__remove"></span>
+            <span class="product__number">2</span>
+            <span class="product__add"></span>
+          </div>
+          <span class="product__price">246 ₽</span>
+          <a class="product__buy" href="#">Добавить</a>
+      </section>
+    </div>
   </div>
+
+  <script></script>
 </body>
 </html>

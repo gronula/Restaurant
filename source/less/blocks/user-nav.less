@@ -1,0 +1,19 @@
+.user-nav {
+  position: relative;
+}
+
+.user-nav__login {
+  font-size: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: url("../img/icon-user.svg") no-repeat;
+    background-size: cover;
+  }
+}
