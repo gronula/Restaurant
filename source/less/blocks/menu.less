@@ -38,9 +38,16 @@
   left: 0;
   right: 0;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 37%, #ffffff 37%, #ffffff 100%);
+  transition: all 0.7s ease-out;
 
-  &--hidden {
-    display: none;
+  &--opened {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &--closed {
+    opacity: 0;
+    z-index: -1;
   }
 }
 
