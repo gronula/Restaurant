@@ -62,6 +62,8 @@ gulp.task("js", function (done) {
     $.uglify(),
     gulp.dest("build/js")
   ]);
+  gulp.src("source/js/**/*.js")
+  .pipe(gulp.dest("build/js"));
   done();
 });
 
