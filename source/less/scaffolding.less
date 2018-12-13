@@ -58,6 +58,27 @@ img {
   height: auto;
 }
 
-.blur {
-  filter: blur(10px);
+
+@media (min-width: @desktop-width) {
+  .blur {
+    transition: all 0.5s ease-in-out;
+    filter: blur(10px);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  .product--opened + .overlay {
+    opacity: 0.3;
+    transition: all 0.5s ease-out;
+  }
 }
