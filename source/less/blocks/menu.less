@@ -61,7 +61,6 @@
   padding-top: 45px;
   padding-right: 56px;
   padding-left: 56px;
-  overflow: auto;
 
   &::after {
     content: "";
@@ -139,6 +138,8 @@
     width: 100%;
     background-image: none;
     border-bottom: 1px solid #e8eaed;
+    opacity: 1;
+    min-height: 85px;
 
     &--hidden {
       display: block;
@@ -146,11 +147,13 @@
   }
 
   .menu__wrapper {
-    position: relative;
+    position: absolute;
+    top: auto;
+    bottom: auto;
     padding-top: 0;
     padding-left: 11%;
     padding-right: 0;
-    overflow: visible;
+    overflow: auto;
 
     &::after {
       position: absolute;
