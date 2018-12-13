@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  var header = document.querySelector('header');
+  var main = document.querySelector('main');
   var siteNav = document.querySelector('.site-nav');
   var siteNavToggle = siteNav.querySelector('.site-nav__toggle');
   var siteNavList = siteNav.querySelector('.site-nav__list');
@@ -20,12 +22,24 @@
 
   var changeClass = function () {
     product.classList.replace('product--opened', 'product--closed');
+    if (window.matchMedia('(max-width: 1599px)').matches) {
+      document.body.style = '';
+    } else {
+      header.classList.remove('blur');
+      main.classList.remove('blur');
+    }
     productClose.removeEventListener('click', changeClass);
   }
 
   var dishItemClickHandler = function (element) {
     element.addEventListener('click', function () {
       product.classList.replace('product--closed', 'product--opened');
+      if (window.matchMedia('(max-width: 1599px)').matches) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        header.classList.add('blur');
+        main.classList.add('blur');
+      }
       productClose.addEventListener('click', changeClass);
     })
   };
@@ -54,8 +68,30 @@
     dishItemClickHandler(dishMore[i]);
   }
 
-  menuList.addEventListener('wheel', function (evt) {
+  var marginLeft = 0;
+  menuNav.addEventListener('wheel', function (evt) {
+    if (!window.matchMedia('(max-width: 1599px)').matches) {
+      evt.preventDefault();
+      if (evt.deltaY > 0 && marginLeft > -250){
+        marginLeft -= 50;
+      } else if (evt.deltaY < 0 && marginLeft < 0) {
+        marginLeft += 50;
+      }
+      menuList.style.marginLeft = marginLeft + 'px';
+    }
+  });
+  menuNav.addEventListener('mousedown', function (evt) {
+    if (evt.which === 2) {
+      evt.preventDefault();
+    }
+  });
+  menuNav.addEventListener('selectstart', function (evt) {
     evt.preventDefault();
-    console.log(evt);
+  });
+
+  menuNav.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 37 || evt.keyCode === 39) {
+      evt.preventDefault();
+    }
   })
 })();

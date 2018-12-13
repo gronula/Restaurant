@@ -60,3 +60,16 @@
   color: @text-color;
   margin-left: 9px;
 }
+
+@media (min-width: @desktop-width) {
+  .dish {
+    width: 22%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 4%;
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+}
