@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ресторан</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Spectral:700" rel="stylesheet">
 </head>
@@ -31,7 +32,7 @@
     </nav>
 
     <nav class="user-nav">
-      <a href="#" class="user-nav__login">Константин</a>
+      <a class="user-nav__login" href="#">Константин</a>
     </nav>
   </header>
 
@@ -53,7 +54,7 @@
             </tr>
           </table>
         </div>
-        <a href="#" class="info__button">О ресторане</a>
+        <a class="info__button" href="#">О ресторане</a>
       </section>
 
       <section class="menu">
@@ -62,55 +63,55 @@
           <div class="menu__wrapper">
             <ul class="menu__list">
               <li class="menu__item menu__item--active">
-                <a href="#" class="menu__link">Популярные</a>
+                <a class="menu__link" href="#">Популярные</a>
                 <sup class="menu__number">12</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Горячее</a>
+                <a class="menu__link" href="#">Горячее</a>
                 <sup class="menu__number">74</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Гарниры</a>
+                <a class="menu__link" href="#">Гарниры</a>
                 <sup class="menu__number">16</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Выпечка</a>
+                <a class="menu__link" href="#">Выпечка</a>
                 <sup class="menu__number">31</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Гриль</a>
+                <a class="menu__link" href="#">Гриль</a>
                 <sup class="menu__number">8</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Детское</a>
+                <a class="menu__link" href="#">Детское</a>
                 <sup class="menu__number">12</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Закуски</a>
+                <a class="menu__link" href="#">Закуски</a>
                 <sup class="menu__number">21</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Супы</a>
+                <a class="menu__link" href="#">Супы</a>
                 <sup class="menu__number">14</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Детское</a>
+                <a class="menu__link" href="#">Детское</a>
                 <sup class="menu__number">12</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Закуски</a>
+                <a class="menu__link" href="#">Закуски</a>
                 <sup class="menu__number">21</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Супы</a>
+                <a class="menu__link" href="#">Супы</a>
                 <sup class="menu__number">14</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Супы</a>
+                <a class="menu__link" href="#">Супы</a>
                 <sup class="menu__number">14</sup>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Супы</a>
+                <a class="menu__link" href="#">Супы</a>
                 <sup class="menu__number">14</sup>
               </li>
             </ul>
@@ -133,7 +134,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img class="dish__image" src="img/image-1.png" alt="Плов Чайханский">
+              <picture>
+                <source type="image/webp" srcset="img/image-1@1x.webp 1x, img/image-1@2x.webp 2x">
+                <img class="dish__image" src="img/image-1@1x.jpg" srcset="img/image-1@1x 1x, img/image-1@2x 2x" alt="Плов Чайханский">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -155,7 +159,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-2.png" alt="Шаверма" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-2@1x.webp 1x, img/image-2@2x.webp 2x">
+                <img class="dish__image" src="img/image-2@1x.jpg" srcset="img/image-2@1x 1x, img/image-2@2x 2x" alt="Шаверма">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -178,7 +185,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-3.png" alt="Шашлык" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-3@1x.webp 1x, img/image-3@2x.webp 2x">
+                <img class="dish__image" src="img/image-3@1x.jpg" srcset="img/image-3@1x 1x, img/image-3@2x 2x" alt="Шашлык">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -200,7 +210,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-4.png" alt="Судак" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-4@1x.webp 1x, img/image-4@2x.webp 2x">
+                <img class="dish__image" src="img/image-4@1x.jpg" srcset="img/image-4@1x 1x, img/image-4@2x 2x" alt="Судак">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -222,7 +235,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-5.png" alt="Манты" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-5@1x.webp 1x, img/image-5@2x.webp 2x">
+                <img class="dish__image" src="img/image-5@1x.jpg" srcset="img/image-5@1x 1x, img/image-5@2x 2x" alt="Манты">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -244,7 +260,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-6.png" alt="Шаверма" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-6@1x.webp 1x, img/image-6@2x.webp 2x">
+                <img class="dish__image" src="img/image-6@1x.jpg" srcset="img/image-6@1x 1x, img/image-6@2x 2x" alt="Шаверма">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -266,7 +285,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-7.png" alt="Бешбармак" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-7@1x.webp 1x, img/image-7@2x.webp 2x">
+                <img class="dish__image" src="img/image-7@1x.jpg" srcset="img/image-7@1x 1x, img/image-7@2x 2x" alt="Бешбармак">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -288,7 +310,10 @@
               <span class="dish__add"></span>
             </div>
             <div class="dish__wrapper">
-              <img src="img/image-8.png" alt="Ковурма" class="dish__image">
+              <picture>
+                <source type="image/webp" srcset="img/image-8@1x.webp 1x, img/image-8@2x.webp 2x">
+                <img class="dish__image" src="img/image-8@1x.jpg" srcset="img/image-8@1x 1x, img/image-8@2x 2x" alt="Ковурма">
+              </picture>
             </div>
 
             <div class="dish__header">
@@ -322,7 +347,13 @@
     <div class="product__wrapper">
       <button class="product__close" type="button">Закрыть</button>
       <div class="product__image-wrapper">
-        <img class="product__image" src="img/product.png" alt="">
+        <picture>
+          <source type="image/webp" media="(min-width: 1600px)" srcset="img/product-desktop@1x.webp 1x, img/product-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/product-mobile@1x.webp 1x, img/product-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1600px)" srcset="img/product-desktop@1x.jpg 1x, img/product-desktop@2x.jpg 2x">
+          <img class="product__image" src="img/product-mobile@1x.jpg" srcset="img/product-mobile@1x.jpg 1x, img/product-mobile@2x.jpg 2x" alt="Стейк из говядины">
+        </picture>
       </div>
 
       <div class="product__text">

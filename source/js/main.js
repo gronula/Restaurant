@@ -76,8 +76,8 @@
     dishItemClickHandler(dishMore[i]);
   }
 
+  var marginLeft = 0;
   menuNav.addEventListener('wheel', function (evt) {
-    var marginLeft = 0;
     if (!window.matchMedia('(max-width: 1599px)').matches) {
       evt.preventDefault();
       if (evt.deltaY > 0 && marginLeft > -450){
